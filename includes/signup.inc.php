@@ -16,7 +16,7 @@
                 exit();
             } else {
                 //Check if input characters are valid
-                if (!preg_match("/^[a-zA-Z0-9]*$/", $escapedUsername) || !preg_match("/^[a-zA-Z0-9]*$/", $escapedPW)) {
+                if (!preg_match("/^[a-zA-Z0-9]*$/", $escapedUsername) || !preg_match("/#(\w*[a-zA-Z0-9_]+)/", $escapedPW)) {
                     header("Location: ../signup.php?signup=invalidsymbol");
                     exit(); 
                 } else {
